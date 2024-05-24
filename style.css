@@ -15,6 +15,7 @@ section
 {
   background-color: white;
   max-width: 500px;
+  padding:40px;
   border-radius: 8px;
   box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.2);
 }
@@ -28,24 +29,28 @@ main{
   border-radius: 8px;
   box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.2);
 }
-.budget-input-section{
-  text-align: center;
-  margin-top: 10px;
-  padding: 80px;
-}
 .budget-summary,.expense-summary, .balance-summary{
   margin: 10px;
 align-items: baseline;
-border: 3px solid rgb(218, 135, 135);
+border: 3px solid rgb(219, 169, 169);
 }
 .expense-list{
   margin-top: 40px;
 }
+input{
+  padding: 10px 15px;
+  margin-left: 20px;
+}
 button{
   background-color:#fdb44b;
   border: none;
+  box-shadow: 1px 1px 0.5px 1px rgba(0, 0, 0, 0.2);
   color: white;
   margin: 5px;
   padding: 10px 15px;
+ cursor: pointer;
   border-radius: 8px;
+}
+button:hover{
+  opacity: 0.8;
 }
