@@ -12,6 +12,29 @@
 </head>
 <body>
   <h1>Budget Tracker</h1>
+  <main>
+    <div class="row gx-5 mt-5">
+      <div class="col">
+        <div class="budget-summary">
+       <h3 class="p-1 mt-2">Budget</h3>
+       <h5 class="total">$2000</h5>
+      </div>
+    </div>
+      <div class="col">
+        <div class="expense-summary">
+        <h3 class="p-1">Expenses</h3>
+        <h5 class="total">$1000</h5>
+      </div>
+    </div>
+    <div class="col">
+    <div class="balance-summary">
+      <h3 class="p-1">Balance</h3>
+      <h5 class="total">$1000</h5>
+     </div>
+    </div>
+  </div>
+  </div>
+</main>
     <section>
       <div class="budget-input-section"> 
         <form id="budget-form" class=" budget-form">
@@ -38,36 +61,14 @@
       <button type="submit" class="memo-submit" id="memo-submit">Submit</button>
      </form>
      </div>
+     <div class="expense-list" id="expense-list">
+      <div class="expense-list__info d-flex justify-content-between text-capitalize">
+        <i class="fa-solid fa-list"></i> 
+        <h5 class="list-item">Expense History</h5>
+         <h5 class="list-item">Money Spent</h5>
+         <h5 class="list-item"></h5>
+        </div>
   </section>
-   <main>
-    <div class="row gx-5 mt-5">
-      <div class="col">
-        <div class="budget-summary">
-       <h3 class="p-1 mt-2">Budget</h3>
-       <h5 class="total">$2000</h5>
-      </div>
-    </div>
-      <div class="col">
-        <div class="expense-summary">
-        <h3 class="p-1">Expenses</h3>
-        <h5 class="total">$1000</h5>
-      </div>
-    </div>
-    <div class="col">
-    <div class="balance-summary">
-      <h3 class="p-1">Balance</h3>
-      <h5 class="total">$1000</h5>
-     </div>
-    </div>
-  </div>
-  </div>
-  <div class="expense-list" id="expense-list">
-  <div class="expense-list__info d-flex justify-content-between text-capitalize">
-     <h5 class="list-item">Expense History</h5>
-     <h5 class="list-item">Money Spent</h5>
-     <h5 class="list-item"></h5>
-    </div>
-</main>
   <script src="app.js"></script>
 </body>
 </html>
