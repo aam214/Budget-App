@@ -15,7 +15,6 @@ section
 {
   background-color: white;
   max-width: 500px;
-  padding:20px;
   border-radius: 8px;
   box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.2);
 }
@@ -23,7 +22,7 @@ main{
   text-align: center;
   padding: 70px;
   background-color: white;
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   display: block;
   border-radius: 8px;
@@ -38,4 +37,15 @@ main{
   margin: 10px;
 align-items: baseline;
 border: 3px solid rgb(218, 135, 135);
+}
+.expense-list{
+  margin-top: 40px;
+}
+button{
+  background-color:#fdb44b;
+  border: none;
+  color: white;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 8px;
 }
