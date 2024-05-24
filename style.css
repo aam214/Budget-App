@@ -1,25 +1,40 @@
 body{
-background-color: rgb(186, 147, 223);
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+url("piggy-bank.jpg");
+background-size: cover;
+width: 100%;
+height: 100vh;
+background-position: center;
+}
+h1{
+  color: white;
+  text-align: center;
+  margin-top: 20px;
 }
 section
 {
   background-color: white;
   max-width: 500px;
+  padding: 40px;
   border-radius: 8px;
+  box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.2);
 }
 main{
+  text-align: center;
+  padding: 70px;
   background-color: white;
   max-width: 900px;
   margin: 0 auto;
   display: block;
   border-radius: 8px;
+  box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.2);
 }
 .budget-input-section{
-  text-align: start;
+  text-align: center;
   margin-top: 200px;
 }
 .budget-summary{
-  display: flex;
+  margin: 10px;
 align-items: baseline;
 border: 1px solid red;
 }

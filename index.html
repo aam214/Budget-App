@@ -15,7 +15,7 @@
     <section>
       <div class="budget-input-section"> 
         <form id="budget-form" class=" budget-form">
-          <h5 class="text-capitalize">Enter Your Budget</h5>
+          <h5 class="budget">Enter Your Budget</h5>
           <div class="form-group">
            <input type="number" class="budget-input" id="budget-input">
           </div>
@@ -24,19 +24,20 @@
    </div>
    <div class="expenses-input-section"> 
     <form id="expense-form" class=" expense-form">
-      <h5 class="text-capitalize">Enter Expenses</h5>
+      <h5 class="expenses">Enter Expenses</h5>
       <div class="form-group">
        <input type="number" class="expense-input" id="expense-input">
       </div>
       <button type="submit" class="expense-submit" id="expense-submit">calculate</button>
      </form>
      <form id="expense-form" class=" expense-form">
-      <h5 class="text-capitalize">Memo</h5>
+      <h6 class="memo">Memo</h6>
       <div class="form-group">
        <input type="number" class="memo-input" id="memo-input">
       </div>
-      <button type="submit" class="memo-submit" id="memo-submit">calculate</button>
+      <button type="submit" class="memo-submit" id="memo-submit">Submit</button>
      </form>
+     </div>
   </section>
    <main>
     <div class="row gx-5 mt-5">
@@ -47,13 +48,13 @@
       </div>
     </div>
       <div class="col">
-        <div class="budget-summary">
+        <div class="expense-summary">
         <h3 class="p-1">Expenses</h3>
         <h5 class="total">$1000</h5>
       </div>
     </div>
     <div class="col">
-    <div class="budget-summary">
+    <div class="balance-summary">
       <h3 class="p-1">Balance</h3>
       <h5 class="total">$1000</h5>
      </div>
@@ -62,8 +63,8 @@
   </div>
   <div class="expense-list" id="expense-list">
   <div class="expense-list__info d-flex justify-content-between text-capitalize">
-     <h5 class="list-item">expense title</h5>
-     <h5 class="list-item">expense value</h5>
+     <h5 class="list-item">Expense History</h5>
+     <h5 class="list-item">Money Spent</h5>
      <h5 class="list-item"></h5>
     </div>
 </main>
