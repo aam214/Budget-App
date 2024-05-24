@@ -1,0 +1,25 @@
+body{
+background-color: rgb(186, 147, 223);
+}
+section
+{
+  background-color: white;
+  max-width: 500px;
+  border-radius: 8px;
+}
+main{
+  background-color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 8px;
+}
+.budget-input-section{
+  text-align: start;
+  margin-top: 200px;
+}
+.budget-summary{
+  display: flex;
+align-items: baseline;
+border: 1px solid red;
+}

@@ -12,46 +12,59 @@
 </head>
 <body>
   <h1>Budget Tracker</h1>
-  <main>
-    <div class="container text-center">
-      <div class="row g-2">
-        <div class="col-6">
-          <div class="p-3"> 
-            <form id="budget-form" class=" budget-form">
-            <h3 class="">What Is Your Budget?</h3>
-            <div class="form-box">
-             <input type="number" class="budget-field" id="budget-field">
-            </div>
-            <button type="submit" class="btn text-capitalize budget-submit" id="budget-submit">calculate</button>
-           </form>
+    <section>
+      <div class="budget-input-section"> 
+        <form id="budget-form" class=" budget-form">
+          <h5 class="text-capitalize">Enter Your Budget</h5>
+          <div class="form-group">
+           <input type="number" class="budget-input" id="budget-input">
           </div>
-        </div>
-        <div class="col-6">
-          <div class="p-3">
-            <h3 class="">Expenses</h3>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="p-3"> 
-            <div class="form-box">    
-            <h2 class="budget-summary">Budget</h2>
-            <span class="budget-icon"><i class="fas fa-money-bill-alt"></i></span>
-            <h4 class="mt-5" id="budget"><span>$ </span>
-              <span id="budget-amount">0</span></h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="p-3">    
-            <div class="form-box">    
-            <h2 class="budget-summary">Expenses</h2>
-            <span class="budget-icon"><i class="fas fa-money-bill-alt"></i></span>
-            <h4 class="mt-5" id="expenses"><span>$ </span>
-            <span id="expenses">0</span></h4>
-            </div>
-            </div>
-            </div>
-            </div>
+          <button type="submit" class="budget-submit" id="budget-submit">calculate</button>
+         </form>
+   </div>
+   <div class="expenses-input-section"> 
+    <form id="expense-form" class=" expense-form">
+      <h5 class="text-capitalize">Enter Expenses</h5>
+      <div class="form-group">
+       <input type="number" class="expense-input" id="expense-input">
+      </div>
+      <button type="submit" class="expense-submit" id="expense-submit">calculate</button>
+     </form>
+     <form id="expense-form" class=" expense-form">
+      <h5 class="text-capitalize">Memo</h5>
+      <div class="form-group">
+       <input type="number" class="memo-input" id="memo-input">
+      </div>
+      <button type="submit" class="memo-submit" id="memo-submit">calculate</button>
+     </form>
+  </section>
+   <main>
+    <div class="row gx-5 mt-5">
+      <div class="col">
+        <div class="budget-summary">
+       <h3 class="p-1 mt-2">Budget</h3>
+       <h5 class="total">$2000</h5>
+      </div>
+    </div>
+      <div class="col">
+        <div class="budget-summary">
+        <h3 class="p-1">Expenses</h3>
+        <h5 class="total">$1000</h5>
+      </div>
+    </div>
+    <div class="col">
+    <div class="budget-summary">
+      <h3 class="p-1">Balance</h3>
+      <h5 class="total">$1000</h5>
+     </div>
+    </div>
+  </div>
+  </div>
+  <div class="expense-list" id="expense-list">
+  <div class="expense-list__info d-flex justify-content-between text-capitalize">
+     <h5 class="list-item">expense title</h5>
+     <h5 class="list-item">expense value</h5>
+     <h5 class="list-item"></h5>
     </div>
 </main>
   <script src="app.js"></script>
