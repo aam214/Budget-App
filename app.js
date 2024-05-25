@@ -1,7 +1,7 @@
-class UI {
+class Tracker {
   constructor() {
-    this.budgetFeedback = document.querySelector(".budget-feedback");
-    this.expenseFeedback = document.querySelector(".expense-feedback");
+    this.budgetMessage = document.querySelector(".budget-message");
+    this.expenseMessage = document.querySelector(".expense-message");
     this.budgetForm = document.getElementById("budget-form");
     this.budgetInput = document.getElementById("budget-input");
     this.budgetAmount = document.getElementById("budget-total");
@@ -15,4 +15,37 @@ class UI {
     this.itemList = [];
     this.itemID = 0;
   }
+ enterBudget(){
+  const inputValue= this.budgetInput.inputValue;
+  if (inputValue=== '' || inputValue<0){
+    this.budgetMessage.classList
+  }
+ } 
 }
+
+function eventListener (){
+const budgetForm = document.getElementById("budget-form");
+const expenseForm = document.getElementById("expense-form");
+const expenseList = document.getElementById("expense-list");
+
+}
+
+const UI = new UI()
+
+budgetForm.addEventListener('submit', function(event){
+event.preventDefault();
+})
+
+expenseForm.addEventListener('submit', function(event){
+  event.preventDefault(); 
+})
+
+expenseList.addEventListener('click', function(event){
+  event.preventDefault(); 
+})
+
+document.addEventListener ('DOMContentLoaded' , function(){
+eventListener();
+}
+
+)

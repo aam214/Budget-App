@@ -11,21 +11,40 @@ h1{
   text-align: center;
   margin-top: 20px;
 }
-section
+h3{
+  margin-top: -10px;
+}
+.section1
 {
+  margin-top: -300px;
   background-color: white;
-  max-width: 500px;
+  margin-left: 20px;
+  max-width: 600px;
   padding:40px;
+  opacity: 0.90;
   border-radius: 8px;
+  box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.section2{
+background-color: white;
+margin: 0 auto;
+text-align: center;
+margin-top: 270px;
+padding: 20px;
+display: block;
+opacity: 0.90;
+border-radius: 8px;
   box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
 }
 main{
   text-align: center;
-  padding: 70px;
+  padding: 50px;
   background-color: white;
-  max-width: 800px;
+  max-width: 720px;
   margin: 0 auto;
   display: block;
+  opacity: 0.90;
   border-radius: 8px;
   box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.2);
 }

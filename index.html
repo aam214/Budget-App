@@ -13,6 +13,7 @@
 <body>
   <h1>Budget Tracker</h1>
   <main>
+    <h2 class="text-start">Dashboard</h2>
     <div class="row gx-5 mt-5">
       <div class="col">
         <div class="budget-summary">
@@ -35,7 +36,17 @@
   </div>
   </div>
 </main>
-    <section>
+<section class="section1">
+  <h3>Log</h3>
+  <div class="expense-list" id="expense-list">
+   <div class="expense-list__info d-flex justify-content-between text-capitalize">
+     <i class="fa-solid fa-list"></i>
+     <h5 class="list-item">Expense History</h5>
+      <h5 class="list-item">Money Spent</h5>
+      <h5 class="list-item"></h5>
+     </div>
+</section>
+    <section class="section2">
       <i class="fa-solid fa-calculator"></i>
       <div class="budget-input-section"> 
         <form id="budget-form" class=" budget-form">
@@ -63,13 +74,6 @@
     </div> 
     </form>
      </div>
-     <div class="expense-list" id="expense-list">
-      <div class="expense-list__info d-flex justify-content-between text-capitalize">
-        <i class="fa-solid fa-list"></i>
-        <h5 class="list-item">Expense History</h5>
-         <h5 class="list-item">Money Spent</h5>
-         <h5 class="list-item"></h5>
-        </div>
   </section>
   <script src="app.js"></script>
 </body>
