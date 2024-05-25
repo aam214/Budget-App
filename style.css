@@ -17,6 +17,26 @@ h1{
 h3{
   margin-top: -10px;
 }
+input{
+  padding: 10px 15px;
+  margin-left: 20px;
+}
+button{
+  background-color:#fdb44b;
+  border: none;
+  box-shadow: 1px 1px 0.5px 1px rgba(0, 0, 0, 0.2);
+  color: white;
+  margin: 5px;
+  padding: 10px 15px;
+ cursor: pointer;
+  border-radius: 8px;
+}
+button:hover{
+  opacity: 0.8;
+}
+.expense-message, .budget-message{
+  display: none;
+}
 .log-section
 {
   margin-top: -100px;
@@ -58,21 +78,4 @@ border: 3px solid rgb(219, 169, 169);
 }
 .expense-list{
   margin-top: 40px;
-}
-input{
-  padding: 10px 15px;
-  margin-left: 20px;
-}
-button{
-  background-color:#fdb44b;
-  border: none;
-  box-shadow: 1px 1px 0.5px 1px rgba(0, 0, 0, 0.2);
-  color: white;
-  margin: 5px;
-  padding: 10px 15px;
- cursor: pointer;
-  border-radius: 8px;
-}
-button:hover{
-  opacity: 0.8;
 }
