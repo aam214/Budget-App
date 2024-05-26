@@ -37,6 +37,10 @@ button:hover{
 .expense-message, .budget-message{
   display: none;
 }
+.showMessage{
+  display: block;
+
+}
 .log-section
 {
   margin-top: -100px;
@@ -60,13 +64,13 @@ border-radius: 8px;
   box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.2);
   max-width: 500px;
 }
-.dashboard main{
+main{
   text-align: center;
   padding: 50px;
   background-color: white;
   max-width: 720px;
   margin-left:800px;
-margin-top: -40px;
+  margin-top: -40px;
   opacity: 0.90;
   border-radius: 8px;
   box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.2);

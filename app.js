@@ -1,4 +1,6 @@
-class Tracker {
+
+  
+class UI {
   constructor() {
     this.budgetMessage = document.querySelector(".budget-message");
     this.expenseMessage = document.querySelector(".expense-message");
@@ -15,37 +17,39 @@ class Tracker {
     this.itemList = [];
     this.itemID = 0;
   }
- enterBudget(){
-  const inputValue= this.budgetInput.inputValue;
-  if (inputValue=== '' || inputValue<0){
-    this.budgetMessage.classList
+
+ enterBudget() {
+  const value= this.budgetInput.value;
+  if (value=== "" || value < 0) {
+    this.budgetMessage.classList.add("showMessage");
+    this.budgetMessage.innerHTML = 
+    `<p>Please enter a value. You cannot enter a negative number.</p>`;
+  }
+  
   }
  } 
-}
 
-function eventListener (){
+function eventListeners (){
 const budgetForm = document.getElementById("budget-form");
 const expenseForm = document.getElementById("expense-form");
 const expenseList = document.getElementById("expense-list");
 
-}
 
-const UI = new UI()
+const ui = new UI()
 
-budgetForm.addEventListener('submit', function(event){
+budgetForm.addEventListener("submit", function(event){
 event.preventDefault();
+ui.enterBudget();
 })
 
-expenseForm.addEventListener('submit', function(event){
+expenseForm.addEventListener("submit", function(event){
   event.preventDefault(); 
 })
 
-expenseList.addEventListener('click', function(event){
-  event.preventDefault(); 
-})
+expenseList.addEventListener("click", function(){
 
-document.addEventListener ('DOMContentLoaded' , function(){
-eventListener();
+})
 }
-
-)
+document.addEventListener ('DOMContentLoaded' , function(){
+  eventListeners();
+})
