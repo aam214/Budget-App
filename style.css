@@ -20,6 +20,11 @@ h1{
 }
 h3{
   margin-top: -10px;
+  opacity: 0.8;
+}
+main i{
+  font-size: 30px;
+  padding: 10px;
 }
 input{
   padding: 10px 15px;
