@@ -24,9 +24,16 @@ class UI {
     this.budgetMessage.classList.add("showMessage");
     this.budgetMessage.innerHTML = 
     `<p>Please enter a value. You cannot enter a negative number.</p>`;
-  }
-  
-  }
+    const referToMessage = this;
+    console.log(this);
+
+    setTimeout(function() {
+      console.log(this);
+      console.log(referToMessage);
+      referToMessage.budgetMessage.classList.remove("showMessage");
+    }, 4000)
+}
+}
  } 
 
 function eventListeners (){
