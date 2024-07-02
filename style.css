@@ -2,7 +2,8 @@ body{
 background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
 url("building-wallpaper.jpg");
 background-size: cover;
-width: 100%;
+background-repeat: no-repeat;
+width: 100vw;
 height: 100vh;
 font-family: "Lora", serif;
 font-optical-sizing: auto;
@@ -87,17 +88,16 @@ border-radius: 3px;
 .dashboard{
   text-align: center;
   padding: 40px;
-
   background-color: white;
   max-width: 720px;
   margin-left:780px;
   margin-top: -40px;
-  opacity: 0.90;
+  opacity: 0.84;
   border-radius: 3px;
   box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.2);
 }
 .budget-summary,.expense-summary, .balance-summary{
-  margin: 10px;
+  margin: 20px;
   padding: 10px;
   text-align: center;
 border: 3px solid #ee923c;
@@ -105,26 +105,40 @@ border: 3px solid #ee923c;
 .expense-list{
   margin-top: 40px;
 }
-@media (max-width:960px){
+@media (max-width:1350px){
+  body{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+  }
   h1{
     font-size: 60px;
+    margin-top: 15px;
     text-align: center;
   }
-  .log-section,main,.calculator-section{
-    margin-top: 50px;
-    max-width: 500px;
+  .log-section,.dashboard,.calculator-section{
     margin: 0 auto;
     display: block;
   }
+  .log-section{
+    margin-top: 30px;
+  }
+  .calculator-section{
+    margin-top: 30px;
+  
+  }
   .budget-summary,.expense-summary, .balance-summary{
-    margin: 0 auto;
-    display: block;
+   padding: 30px;
+   margin-left: -40px;
+   text-align: center;
+   margin-top: -8px;
   }
   h3{
     font-size: 25px;
   }
    .dashboard{
+    max-width: 700px;
     display: flex;
-  
+    margin-top: 30px;
   }
 }
