@@ -1,5 +1,4 @@
 
-  
 class UI {
   constructor() {
     this.budgetMessage = document.querySelector(".budget-message");
