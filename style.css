@@ -78,13 +78,12 @@ margin-left: 900px;
 text-align: center;
 margin-top:100px;
 padding: 20px;
-
 opacity: 0.90;
 border-radius: 8px;
   box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.2);
   max-width: 500px;
 }
-main{
+.dashboard{
   text-align: center;
   padding: 40px;
   background-color: white;
@@ -122,7 +121,7 @@ border: 3px solid rgb(219, 169, 169);
   h3{
     font-size: 25px;
   }
-  main{
+   .dashboard{
     display: flex;
   
   }
