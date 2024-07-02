@@ -55,6 +55,23 @@ button{
 button:hover{
   opacity: 0.8;
 }
+.dashboard{
+  text-align: center;
+  background-color: white;
+  max-width: 720px;
+  margin-left:780px;
+  margin-top: -40px;
+  padding: 40px;
+  opacity: 0.84;
+  border-radius: 3px;
+  box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.2);
+}
+.budget-summary,.expense-summary, .balance-summary{
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+border: 3px solid #ee923c;
+}
 .expense-message, .budget-message{
   display: none;
 }
@@ -67,7 +84,7 @@ button:hover{
   margin-left: 40px;
   max-width: 540px;
   padding:20px;
-  opacity: 0.90;
+  opacity: 0.84;
   border-radius: 3px;
   box-shadow: 2px 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
@@ -80,40 +97,20 @@ margin-left: 890px;
 text-align: center;
 margin-top:40px;
 padding: 40px;
-opacity: 0.90;
+opacity: 0.84;
 border-radius: 3px;
   box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.2);
   max-width: 500px;
 }
-.dashboard{
-  text-align: center;
-  padding: 40px;
-  background-color: white;
-  max-width: 720px;
-  margin-left:780px;
-  margin-top: -40px;
-  opacity: 0.84;
-  border-radius: 3px;
-  box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.2);
-}
-.budget-summary,.expense-summary, .balance-summary{
-  margin: 20px;
-  padding: 10px;
-  text-align: center;
-border: 3px solid #ee923c;
-}
+
 .expense-list{
   margin-top: 40px;
 }
 @media (max-width:1350px){
-  body{
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    min-height: 100vh;
-  }
   h1{
-    font-size: 60px;
+    font-size: 65px;
     margin-top: 15px;
+    letter-spacing: 2px;
     text-align: center;
   }
   .log-section,.dashboard,.calculator-section{
@@ -128,17 +125,24 @@ border: 3px solid #ee923c;
   
   }
   .budget-summary,.expense-summary, .balance-summary{
-   padding: 30px;
-   margin-left: -40px;
-   text-align: center;
+   padding: 10px;
    margin-top: -8px;
   }
   h3{
     font-size: 25px;
   }
    .dashboard{
-    max-width: 700px;
-    display: flex;
+    max-width: 900px;
     margin-top: 30px;
   }
+}
+@media (max-width:1350px){
+.dashboard{
+  max-width: 600px;
+  padding: 15px;
+}
+.budget-summary,.expense-summary, .balance-summary{
+ 
+  text-align: center;
+}
 }

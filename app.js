@@ -1,4 +1,3 @@
-
 class UI {
   constructor() {
     this.budgetMessage = document.querySelector(".budget-message");
@@ -36,8 +35,13 @@ class UI {
 }
 }
 showBalance(){
-  console.log(`This is fun!`);
+ const expense = this.sumofExpenses();
+ const total = parseInt(this.budgetAmount.textContent) - expense;
 }
+sumofExpenses(){
+  let total = 200;
+  return total;
+ }
  } 
 
 function eventListeners (){
