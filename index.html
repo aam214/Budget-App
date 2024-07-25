@@ -16,7 +16,7 @@
 <body>
   <h1>Budget Tracker</h1>
   <main class="dashboard">
-  <h2 class="text-start">Dashboard</h2>
+  <h2 class="text-center">Dashboard</h2>
   <div class="row mt-5">
   <div class="col-md-4 text-center">
   <div class="budget-summary">
@@ -42,24 +42,21 @@
   </div>
   </div>
 </main>
-  <section class="log-section">
-  <h3 class="m-2">Log
-  <span><i class="fa-solid fa-list m-2"></i></span>
-</h3>
+<section class="log-section">
+  <h2 class="text-center">📄</h2>
+  <h3 class="text-center">Log</h3>
   <div class="expense-list" id="expense-list">
-  <div class="expense-list__info d-flex justify-content-between">
+  <div class="expense-list__info d-flex justify-content-evenly">
   <h5 class="list-item">Expense History</h5>
   <h5 class="list-item">Money Spent</h5>
   <h5 class="list-item"></h5>
   </div>
 </section>
-
   <section class="budget-section">
-  <i class="fa-solid fa-calculator"></i>
   <div class="budget-input-section">    
   <div class="budget-message alert alert-danger">budget message</div>
   <form id="budget-form" class=" budget-form">
-  <h4 class="budget">Enter Your Budget</h4>
+  <h4 class="mb-4">Enter Your Budget 💰</h4>
   <div class="form-group">
   <input type="number" title="Enter number here" class="budget-input" id="budget-input">
   <button type="submit" title="submit"  class="budget-submit" id="budget-submit">Calculate</button>
@@ -71,7 +68,7 @@
    <div class="expenses-input-section">
     <div class="expense-message alert alert-danger">expense message</div>
     <form id="expense-form" class="expense-form">
-      <h4 class="expenses">Enter Expenses</h4>
+      <h4 class="mb-4">Enter Expenses 💲</h4>
       <div class="form-group">
         <input type="number" title="Enter number here" class="expense-input" id="expense-input">
         <button type="submit" class="expense-submit" title="submit"  id="expense-submit">Calculate</button>
@@ -79,10 +76,10 @@
   </div> 
     </form>
     <form id="expense-form" class=" expense-form">
-      <h4 class="memo">Memo</h4>
+      <h4 class="mt-5 mb-4">Memo</h4>
       <div class="form-group">
-       <input type="number" class="memo-input" id="memo-input">
-      <button type="submit" class="memo-submit" id="memo-submit">Submit</button>
+       <input type="text" class="memo-input" id="memo-input">
+      <button type="submit" class="memo-submit" id="memo-submit">Submit ✔️</button>
     </div> 
     </form>
     </section>
