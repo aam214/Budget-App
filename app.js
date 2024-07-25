@@ -6,7 +6,7 @@ class UI {
     this.budgetInput = document.getElementById("budget-input");
     this.budgetTotal = document.getElementById("budget-total");
     this.expenseTotal = document.getElementById("expense-total");
-    this.balanceSummary = document.getElementById("balance-summary");
+    this.balance= document.getElementById("balance");
     this.balanceTotal = document.getElementById("balance-total");
     this.expenseForm = document.getElementById("expense-form");
     this.expenseInput = document.getElementById("expense-input");
@@ -38,6 +38,17 @@ showBalance(){
  const expense = this.sumofExpenses();
  const total = parseInt(this.budgetTotal.textContent) - expense;
  this.balanceTotal.textContent = total;
+
+ if (total < 0){
+  this.balance.classList.remove("greenFont", "blackFont");
+  this.balance.classList.add("redFont");
+ } else if (total > 0) {
+  this.balance.classList.remove("redFont", "blackFont");
+  this.balance.classList.add("greenFont");
+ }  else if (total === 0) {
+  this.balance.classList.remove("redFont", "greenFont");
+  this.balance.classList.add("blackFont");
+ }
 }
 sumofExpenses(){
   let total = 200;
@@ -61,6 +72,7 @@ ui.enterBudget();
 
 expenseForm.addEventListener("submit", function(event){
   event.preventDefault(); 
+  ui.enterExpense();
 })
 
 expenseList.addEventListener("click", function(){
