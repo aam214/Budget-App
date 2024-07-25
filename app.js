@@ -6,8 +6,8 @@ class UI {
     this.budgetInput = document.getElementById("budget-input");
     this.budgetTotal = document.getElementById("budget-total");
     this.expenseTotal = document.getElementById("expense-total");
-    this.balance = document.getElementById("balance-summary");
-    this.balanceAmount = document.getElementById("balance-total");
+    this.balanceSummary = document.getElementById("balance-summary");
+    this.balanceTotal = document.getElementById("balance-total");
     this.expenseForm = document.getElementById("expense-form");
     this.expenseInput = document.getElementById("expense-input");
     this.amountInput = document.getElementById("amount-input");
@@ -36,7 +36,8 @@ class UI {
 }
 showBalance(){
  const expense = this.sumofExpenses();
- const total = parseInt(this.budgetAmount.textContent) - expense;
+ const total = parseInt(this.budgetTotal.textContent) - expense;
+ this.balanceTotal.textContent = total;
 }
 sumofExpenses(){
   let total = 200;

@@ -72,12 +72,22 @@ button:hover{
   text-align: center;
 border: 3px solid #ee923c;
 }
-.expense-message, .budget-message{
-  display: none;
+.red-font{
+  color: red;
+}
+.green-font{
+  color: green;
+}
+.black-font{
+  color: black;
 }
 .showMessage{
   display: block;
 }
+.expense-message, .budget-message{
+  display: none;
+}
+
 .log-section{
   margin-top: -100px;
   background-color: white;
