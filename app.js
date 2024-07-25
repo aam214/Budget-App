@@ -4,8 +4,8 @@ class UI {
     this.expenseMessage = document.querySelector(".expense-message");
     this.budgetForm = document.getElementById("budget-form");
     this.budgetInput = document.getElementById("budget-input");
-    this.budgetAmount = document.getElementById("budget-total");
-    this.expenseAmount = document.getElementById("expense-total");
+    this.budgetTotal = document.getElementById("budget-total");
+    this.expenseTotal = document.getElementById("expense-total");
     this.balance = document.getElementById("balance-summary");
     this.balanceAmount = document.getElementById("balance-total");
     this.expenseForm = document.getElementById("expense-form");
@@ -15,21 +15,21 @@ class UI {
     this.itemList = [];
     this.itemID = 0;
   }
-
+//submit budget method
  enterBudget() {
   const value= this.budgetInput.value;
   if (value=== "" || value < 0) {
     this.budgetMessage.classList.add("showMessage");
     this.budgetMessage.innerHTML = 
-    `<p>Please enter a value. You cannot enter a negative number.</p>`;
+    `<div>Please enter a value. You cannot enter a negative number.</div>`;
     const refer = this;
-    console.log(this);
+    //console.log(this);
 
     setTimeout(function() {
       refer.budgetMessage.classList.remove("showMessage");
-    }, 4000)
+    }, 5000)
 } else{
-  this.budgetAmount.textContent = value;
+  this.budgetTotal.textContent = value;
   this.budgetInput.value = '';
   this.showBalance();
 }
@@ -50,6 +50,7 @@ const expenseForm = document.getElementById("expense-form");
 const expenseList = document.getElementById("expense-list");
 
 
+//new instance of UI class
 const ui = new UI()
 
 budgetForm.addEventListener("submit", function(event){
