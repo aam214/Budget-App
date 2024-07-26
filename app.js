@@ -10,7 +10,7 @@ class UI {
     this.balanceTotal = document.getElementById("balance-total");
     this.expenseForm = document.getElementById("expense-form");
     this.expenseInput = document.getElementById("expense-input");
-    this.memoInput = document.getElementById("memo-input");
+    this.amountInput = document.getElementById("amount-input");
     this.expenseList = document.getElementById("expense-list");
     this.listItem = [];
     this.itemID = 0;
@@ -52,8 +52,8 @@ if (total < 0) {
 }
 enterExpenses() {
   const expenseValue = this.expenseInput.value;
-  const memoValue = this.memoInput.value;
-  if (memoValue === "" || expenseValue ===  "" || expenseValue < 0) {
+  const amountValue = this.amountInput.value;
+  if (expenseValue === "" || amountValue ===  "" || amountValue < 0) {
   this.expenseMessage.classList.add("showMessage");
   this.expenseMessage.innerHTML =
    `<div>Fields cannot be negative or empty.</div>`;
@@ -62,19 +62,19 @@ setTimeout(() => {
   refer.expenseMessage.classList.remove("showMessage");
 }, 4000);
 } else {
-  let amount = parseInt(memoValue);
-  this.expenseInput.value = "";
-  this.memoInput.value = "";
+  let amount = parseInt(amountValue);
+  this.expenseInput = "";
+  this.amountInput= "";
 
   let expense ={
     id: this.itemID,
     title: expenseValue,
-    amount: amount,
-  }
+  amount:amount,
+  };
   this.itemID++;
   this.listItem.push(expense);
   this.addExpense(expense);
-//show Balance
+
 }
 }
 addExpense(expense){
@@ -84,13 +84,13 @@ addExpense(expense){
     `
   <div class="expense-item d-flex justify-content-evenly align-items-baseline">
    <h6 class="expense-title mb-0 text-uppercase list-item">${expense.title}</h6>
-   <h5 class="expense-amount mb-0 list-item">${expense.memo}</h5>
+   <h5 class="expense-amount mb-0 list-item">${expense.amount}</h5>
    <div class="expense-icons list-item">
     <a href="#" class="edit-icon mx-2" data-id="${expense.id}">
-   
+   <i class="fas fa-edit"></i>
     </a>
     <a href="#" class="delete-icon" data-id="${expense.id}">
-     
+     <i class="fas fa-trash"></i>
     </a>
    </div>`;
 this.expenseList.appendChild(div);
