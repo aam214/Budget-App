@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://kit.fontawesome.com/d718392e10.js" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/d718392e10.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="description" content="Budget App Tracker">
   <link rel="stylesheet" href="style.css">
@@ -51,37 +51,38 @@
   <h5 class="list-item">Money Spent</h5>
   <h5 class="list-item"></h5>
   </div>
+</div>
+<div class="expense"></div>
 </section>
   <section class="budget-section">
-  <div class="budget-input-section">    
-  <div class="budget-message alert alert-danger">budget message</div>
-  <form id="budget-form" class=" budget-form">
-  <h4 class="mb-4">Enter Your Budget 💰</h4>
+  
+  <div class="budget-message alert alert-danger 
+  text-capitalize" role="alert">budget message</div>
+  <form class="budget-form"  id="budget-form">
+  <label class="mb-4">Enter Your Budget 💰</label>
   <div class="form-group">
   <input type="number" title="Enter number here" class="budget-input" id="budget-input">
-  <button type="submit" title="submit"  class="budget-submit" id="budget-submit">Calculate</button>
-        </div> 
-        </div> 
-        </form>
+  </div>
+  <button type="submit" class="budget-submit" id="budget-submit">Calculate</button>
+</form>
+ 
   </section>
   <section class="expense-section">
    <div class="expenses-input-section">
-    <div class="expense-message alert alert-danger">expense message</div>
-    <form id="expense-form" class="expense-form">
-      <h4 class="mb-4">Enter Expenses 💲</h4>
+    <div class="expense-message alert alert-danger 
+    text-capitalize" role="alert">expense message</div>
+    <form class="expense-form"  id="expense-form" >
+      <label class="mb-4">Enter Expenses 💲</label>
       <div class="form-group">
         <input type="number" title="Enter number here" class="expense-input" id="expense-input">
-        <button type="submit" class="expense-submit" title="submit"  id="expense-submit">Calculate</button>
-    </div> 
-  </div> 
-    </form>
-    <form id="expense-form" class=" expense-form">
-      <h4 class="mt-5 mb-4">Memo</h4>
+        </div>
+      <label class="mt-5 mb-4">Memo</label>
       <div class="form-group">
        <input type="text" class="memo-input" id="memo-input">
-      <button type="submit" class="memo-submit" id="memo-submit">Submit ✔️</button>
-    </div> 
+      </div>
+       <button type="submit" class="memo-submit" id="memo-submit">Submit ✔️</button>
     </form>
+  </div>
     </section>
   <script src="app.js"></script>
 </body>
