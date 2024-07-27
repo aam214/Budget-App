@@ -30,13 +30,13 @@ class UI {
 } else{
   this.budgetTotal.textContent = value;
   this.budgetInput.value = "";
-  this.showBalance();
+  this.summaryBalance();
 
 }
 }
 
 
-showBalance() {
+summaryBalance() {
  const expense = this.sumOfExpenses();
  const total = parseInt(this.budgetTotal.textContent) - expense;
  this.balanceTotal.textContent = total;
@@ -77,7 +77,7 @@ setTimeout(() => {
   this.itemID++;
   this.listItem.push(expense);
   this.addToExpense(expense);
-
+  this.summaryBalance();
 }
 }
 addToExpense(expense){
