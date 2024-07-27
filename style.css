@@ -94,9 +94,10 @@ border: 3px solid #6bcc32;
 .showMessage{
   display: block;
 }
-.expense-message, 
-.budget-message{
-  display: none;
+.expense-message, .budget-message{
+ display: block;
+ color: red;
+ 
 }
 .list-item{
   margin-left: 20px;

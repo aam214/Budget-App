@@ -17,6 +17,7 @@ class UI {
   }
 //submit budget method
  enterBudget() {
+  console.log("Budget submitted"); // Debugging line
   const value= this.budgetInput.value;
   if (value === "" || value < 0) {
     this.budgetMessage.classList.add("showMessage");
@@ -51,7 +52,9 @@ if (total < 0) {
  }
 }
 enterExpenses() {
+  console.log("Expense submitted"); // Debugging line
   const expenseValue = this.expenseInput.value;
+
   const amountValue = this.amountInput.value;
   if (expenseValue === "" || amountValue ===  "" || amountValue < 0) {
   this.expenseMessage.classList.add("showMessage");
@@ -63,8 +66,8 @@ setTimeout(() => {
 }, 4000);
 } else {
   let amount = parseInt(amountValue);
-  this.expenseInput = "";
-  this.amountInput= "";
+  this.expenseInput.value = "";
+  this.amountInput.value = "";
 
   let expense ={
     id: this.itemID,
@@ -107,19 +110,21 @@ const expenseList = document.getElementById("expense-list");
 
 
 //new instance of UI class
+
+
 const ui = new UI();
 
+// Add event listeners
 budgetForm.addEventListener("submit", function(event) {
-event.preventDefault();
-ui.enterBudget();
-
+  event.preventDefault();
+  ui.enterBudget();
 });
+
 expenseForm.addEventListener("submit", function(event) {
-event.preventDefault(); 
-ui.enterExpenses();
+  event.preventDefault();
+  ui.enterExpenses();
 });
-
-expenseList.addEventListener("click", function() {});
+expenseList.addEventListener("click", function(){});
 }
 document.addEventListener ("DOMContentLoaded", function() {
   eventListeners();
