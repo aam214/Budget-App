@@ -100,8 +100,15 @@ border: 3px solid #6bcc32;
  
 }
 .list-item{
-  margin-left: 20px;
+margin-left: 10px;
 font-size: 25px;
+ }
+ .log-section i{
+  font-size: 20px;
+ }
+ a{
+  text-decoration: none;
+  color: #4e9624;
  }
 .log-section{
   background-color: white;
