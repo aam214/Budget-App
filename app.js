@@ -76,11 +76,11 @@ setTimeout(() => {
   };
   this.itemID++;
   this.listItem.push(expense);
-  this.addExpense(expense);
+  this.addToExpense(expense);
 
 }
 }
-addExpense(expense){
+addToExpense(expense){
   const div = document.createElement('div');
   div.classList.add("expense");
   div.innerHTML =
