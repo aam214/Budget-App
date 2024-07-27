@@ -52,7 +52,7 @@ if (total < 0) {
  }
 }
 enterExpenses() {
-  console.log("Expense submitted"); // Debugging line
+  //console.log("Expense submitted");
   const expenseValue = this.expenseInput.value;
 
   const amountValue = this.amountInput.value;
@@ -99,7 +99,11 @@ addToExpense(expense){
 this.expenseList.appendChild(div);
 }
 sumOfExpenses() {
-  let total = 200;
+  let total = 0;
+  if (this.listItem > 0) {
+    console.log(this.listItem);
+  }
+  this.expensesResult.textContent =total;
   return total;
  }
 }
