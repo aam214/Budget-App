@@ -17,7 +17,7 @@ class UI {
   }
 //submit budget method
  enterBudget() {
-  console.log("Budget submitted"); // Debugging line
+  //console.log("Budget submitted"); 
   const value= this.budgetInput.value;
   if (value === "" || value < 0) {
     this.budgetMessage.classList.add("showMessage");
@@ -30,13 +30,11 @@ class UI {
 } else{
   this.budgetTotal.textContent = value;
   this.budgetInput.value = "";
-  this.summaryBalance();
+  this.showBalance();
 
 }
 }
-
-
-summaryBalance() {
+showBalance() {
  const expense = this.sumOfExpenses();
  const total = parseInt(this.budgetTotal.textContent) - expense;
  this.balanceTotal.textContent = total;
@@ -77,7 +75,7 @@ setTimeout(() => {
   this.itemID++;
   this.listItem.push(expense);
   this.addToExpense(expense);
-  this.summaryBalance();
+  this.showBalance();
 }
 }
 addToExpense(expense){
@@ -99,13 +97,17 @@ addToExpense(expense){
 this.expenseList.appendChild(div);
 }
 sumOfExpenses() {
-  let total = 0;
-  if (this.listItem > 0) {
-    console.log(this.listItem);
+let total = 0;
+if (this.listItem.length > 0) {
+  total = this.listItem.reduce(function(acc, curr) {
+    console.log(`Total is ${acc} and the current value is ${curr.amount}`);
+    acc += curr.amount;
+    return acc;
+  }, 0);
   }
-  this.expensesResult.textContent =total;
+  this. expenseTotal.textContent = total;
   return total;
- }
+}
 }
 function eventListeners() {
 const budgetForm = document.getElementById("budget-form");
