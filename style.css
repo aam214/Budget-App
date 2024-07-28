@@ -46,6 +46,7 @@ h5 main{
 input{
   padding: 10px 15px;
   width: 59%;
+  border: 1px solid rgb(59, 59, 59);
  cursor: pointer;
   margin-left: 20px;
 }
@@ -81,6 +82,7 @@ margin-left: 700px;
   padding: 20px;
   text-align: center;
 border: 3px solid #6bcc32;
+border-radius: 3px;
 }
 .redFont{
   color: red;
@@ -113,7 +115,7 @@ font-size: 25px;
 .log-section{
   background-color: white;
   margin-left: 850px;
-  margin-top: 20px;
+  margin-top: 80px;
   max-width: 700px;
   padding:18px;
   opacity: 0.84;
@@ -124,7 +126,7 @@ font-size: 25px;
 background-color: white;
 margin-left: 40px;
 text-align: center;
-margin-top:-400px;
+margin-top:-300px;
 padding: 40px;
 opacity: 0.84;
 border-radius: 3px;
@@ -135,7 +137,7 @@ border-radius: 3px;
   background-color: white;
   margin-left: 40px;
   text-align: center;
-  margin-top:20px;
+  margin-top:-80px;
   padding: 40px;
   opacity: 0.84;
   border-radius: 3px;
