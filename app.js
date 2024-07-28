@@ -24,10 +24,10 @@ class UI {
     this.budgetMessage.innerHTML = 
     `<div>Please enter a value. You cannot enter a negative number.</div>`;
     const refer = this;
-    setTimeout(() => {
+    setTimeout( () => {
       refer.budgetMessage.classList.remove("showMessage");
-    }, 5000);
-} else{
+    }, 4000);
+}else{
   this.budgetTotal.textContent = value;
   this.budgetInput.value = "";
   this.showBalance();
@@ -82,21 +82,18 @@ addToExpense(expense){
   const div = document.createElement('div');
   div.classList.add("expense");
   div.innerHTML =
-`  <div class="expense-item d-flex justify-content-between align-items-baseline">
-
-         <h6 class="expense-title mb-0 list-item">${expense.title}</h6>
-         <h5 class="expense-amount mb-0 list-item">${expense.amount}</h5>
-
-         <div class="expense-icons list-item">
-
-          <a href="#" class="edit-icon mx-2" data-id="${expense.id}">
-           <i class="fas fa-edit"></i>
-          </a>
-          <a href="#" class="delete-icon" data-id="${expense.id}">
-           <i class="fas fa-trash"></i>
-          </a>
-         </div>
-        </div>`;
+`   <div class="expense-item d-flex justify-content-evenly align-items-baseline">
+    <h6 class="expense-title list-item">${expense.title}</h6>
+    <h6 class="expense-amount list-item">${expense.amount}</h6>
+    <div class="expense-icons list-item">
+    <a href="#" class="edit-icon" data-id="${expense.id}">
+    <i class="fas fa-edit"></i>
+    </a>
+    <a href="#" class="delete-icon" data-id="${expense.id}">
+    <i class="fas fa-trash"></i>
+    </a>
+    </div> 
+    </div> `;
 this.expenseList.appendChild(div);
 }
 sumOfExpenses() {
@@ -116,7 +113,6 @@ let id = parseInt(element.dataset.id);
 let parent = element.parentElement.parentElement.parentElement;
 //remove from the DOM
 this.expenseList.removeChild(parent);
-//
 let expense = this.listItem.filter(function(item){
   return item.id === id;
 });
@@ -131,7 +127,16 @@ this.listItem = temporaryLine;
 this.showBalance();
 }
 removeExpense(element){
-
+let id = parseInt(element.dataset.id);
+let parent = element.parentElement.parentElement.parentElement;
+//remove from the DOM
+this.expenseList.removeChild(parent);
+//remove from the list
+let temporaryLine = this.listItem.filter(function(item){
+  return item.id !== id;
+});
+this.listItem = temporaryLine;
+this.showBalance();
 }
 }
 

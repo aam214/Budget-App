@@ -41,8 +41,9 @@ section i{
   font-size: 30px;
 }
 h5 main{
-  font-size: 35px;
+  font-size: 38px;
 }
+
 input{
   padding: 10px 15px;
   width: 59%;
@@ -101,16 +102,26 @@ border-radius: 3px;
  color: red;
  
 }
-.list-item{
-margin-left: 10px;
+.lists-item{
+margin-left:100px;
 font-size: 25px;
  }
  .log-section i{
-  font-size: 20px;
+  font-size: 18px;
+  padding: 5px;
  }
  a{
   text-decoration: none;
   color: #4e9624;
+ }
+ .expense-icons{
+  float: left;
+ }
+ .expense-amount{
+  margin-left: 140px;
+ }
+ .expense-title{
+  margin-left: 70px;
  }
 .log-section{
   background-color: white;
@@ -126,7 +137,7 @@ font-size: 25px;
 background-color: white;
 margin-left: 40px;
 text-align: center;
-margin-top:-300px;
+margin-top:-310px;
 padding: 40px;
 opacity: 0.84;
 border-radius: 3px;
@@ -176,12 +187,36 @@ margin-top:20px;
   }
 }
 @media (max-width:764px){
-.dashboard{
-  max-width: 800px;
+  h1{
+    font-size: 40px;
+  }
+  h2{
+    font-size: 27px;
+  }
+  h3{
+    font-size: 20px;
+  }
+  label{
+    font-size: 20px;
+  }
+  .dashboard{
   padding:20px;
 }
+.log-section,.dashboard,.budget-section, .expense-section{
+margin: 10px;
+}
+input{
+  width: 80%;
+}
+button{
+  padding: 5px 10px; 
+  width: 40%;
+  align-items: center;
+}
+
 .budget-summary,.expense-summary, .balance-summary{
   text-align: center;
   padding: 10px;
 }
+
 }
