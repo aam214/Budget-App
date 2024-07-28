@@ -17,17 +17,17 @@ class UI {
     
     const savedList = localStorage.getItem('listItem');
     const savedID = localStorage.getItem('itemID');
-  
+
     if (savedList) {
       this.listItem = JSON.parse(savedList);
       this.listItem.forEach(item => this.addToExpense(item));
     }
-  
+
     if (savedID) {
       this.itemID = parseInt(savedID);
     }
   }
- 
+   
 //submit budget method
  enterBudget() {
   //console.log("Budget submitted"); 
@@ -160,7 +160,7 @@ this.saveWork();
 }
 saveWork() {
   localStorage.setItem('listItem', JSON.stringify(this.listItem));
-  localStorage.setItem('itemID', this.itemID);
+  localStorage.setItem('itemID', this.itemID.toString());
 }
 }
 
