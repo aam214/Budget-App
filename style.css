@@ -2,9 +2,10 @@ body{
 background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
 url("building-wallpaper.jpg");
 background-size: cover;
-background-repeat: no-repeat;
+height: 100%;
 width: 100vw;
-height: 100vh;
+background-repeat: repeat-y;
+overflow: scroll;
 font-family: "Lora", serif;
 font-optical-sizing: auto;
 font-weight: 400;
@@ -148,7 +149,7 @@ border-radius: 3px;
   background-color: white;
   margin-left: 40px;
   text-align: center;
-  margin-top:-80px;
+  margin-top:-180px;
   padding: 40px;
   opacity: 0.84;
   border-radius: 3px;
