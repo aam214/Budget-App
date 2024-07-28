@@ -14,7 +14,19 @@ class UI {
     this.expenseList = document.getElementById("expense-list");
     this.listItem = [];
     this.itemID = 0;
+    
+    const savedList = localStorage.getItem('listItem');
+    const savedID = localStorage.getItem('itemID');
+    if (savedList) {
+      this.listItem = JSON.parse(savedList);
+      this.listItem.forEach(item => this.addToExpense(item));
+    }
+    if (savedID) {
+      this.itemID = parseInt(savedID);
+    } 
+
   }
+ 
 //submit budget method
  enterBudget() {
   //console.log("Budget submitted"); 
@@ -24,7 +36,7 @@ class UI {
     this.budgetMessage.innerHTML = 
     `<div>Please enter a value. You cannot enter a negative number.</div>`;
     const refer = this;
-    setTimeout( () => {
+    setTimeout(function() {
       refer.budgetMessage.classList.remove("showMessage");
     }, 4000);
 }else{
@@ -59,7 +71,7 @@ enterExpenses() {
   this.expenseMessage.innerHTML =
    `<div>Fields cannot be negative or empty.</div>`;
 const refer = this;
-setTimeout(() => {
+setTimeout(function() {
   refer.expenseMessage.classList.remove("showMessage");
 }, 4000);
 } else {
@@ -77,6 +89,7 @@ setTimeout(() => {
   this.addToExpense(expense);
   this.showBalance();
 }
+this.saveData();
 }
 addToExpense(expense){
   const div = document.createElement('div');
@@ -125,6 +138,7 @@ let temporaryLine = this.listItem.filter(function(item){
 });
 this.listItem = temporaryLine;
 this.showBalance();
+this.saveData();
 }
 removeExpense(element){
 let id = parseInt(element.dataset.id);
@@ -137,6 +151,11 @@ let temporaryLine = this.listItem.filter(function(item){
 });
 this.listItem = temporaryLine;
 this.showBalance();
+this.saveData();
+}
+saveData() {
+  localStorage.setItem('listItem', JSON.stringify(this.listItem));
+  localStorage.setItem('itemID', this.itemID);
 }
 }
 
