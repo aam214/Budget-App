@@ -82,25 +82,28 @@ addToExpense(expense){
   const div = document.createElement('div');
   div.classList.add("expense");
   div.innerHTML =
+`  <div class="expense-item d-flex justify-content-between align-items-baseline">
 
-  `<div class="expense-icons list-item">
-  <a href="#" class="edit-icon" data-id="${expense.id}">
-  <i class="fas fa-edit"></i>
-  </a>
-  <a href="#" class="delete-icon" data-id="${expense.id}">
-  <i class="fas fa-trash"></i>
-  </a>
-  <div class="expense-item d-flex justify-content-evenly align-items-baseline">
-   <h6 class="expense-title mb-0 list-item">${expense.title}</h6>
-   <h5 class="expense-amount mb-0 list-item">${expense.amount}</h5>
-   </div>`;
+         <h6 class="expense-title mb-0 list-item">${expense.title}</h6>
+         <h5 class="expense-amount mb-0 list-item">${expense.amount}</h5>
+
+         <div class="expense-icons list-item">
+
+          <a href="#" class="edit-icon mx-2" data-id="${expense.id}">
+           <i class="fas fa-edit"></i>
+          </a>
+          <a href="#" class="delete-icon" data-id="${expense.id}">
+           <i class="fas fa-trash"></i>
+          </a>
+         </div>
+        </div>`;
 this.expenseList.appendChild(div);
 }
 sumOfExpenses() {
 let total = 0;
 if (this.listItem.length > 0) {
   total = this.listItem.reduce(function(acc, curr) {
-    console.log(`Total is ${acc} and the current value is ${curr.amount}`);
+    //console.log(`Total is ${acc} and the current value is ${curr.amount}`);
     acc += curr.amount;
     return acc;
   }, 0);
@@ -109,7 +112,23 @@ if (this.listItem.length > 0) {
   return total;
 }
 editExpense(element) {
-
+let id = parseInt(element.dataset.id);
+let parent = element.parentElement.parentElement.parentElement;
+//remove from the DOM
+this.expenseList.removeChild(parent);
+//
+let expense = this.listItem.filter(function(item){
+  return item.id === id;
+});
+//show value
+this.expenseInput.value = expense[0].title;
+this.amountInput.value = expense[0].amount;
+//remove from list
+let temporaryLine = this.listItem.filter(function(item){
+  return item.id !== id;
+});
+this.listItem = temporaryLine;
+this.showBalance();
 }
 removeExpense(element){
 
@@ -135,8 +154,15 @@ expenseForm.addEventListener("submit", function(event) {
   ui.enterExpenses();
 });
 expenseList.addEventListener("click", function(event){
-console.log(event.target);
+if(event.target.parentElement.classList.contains('edit-icon')){
+  ui.editExpense(event.target.parentElement)
+} 
+else if(event.target.parentElement.classList.contains('delete-icon'))
+{
+  ui.removeExpense(event.target.parentElement)
+}
 });
+
 }
 document.addEventListener ("DOMContentLoaded", function() {
   eventListeners();
