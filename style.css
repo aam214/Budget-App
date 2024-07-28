@@ -29,6 +29,7 @@ h2{
 h3{
   margin-top: -10px;
   opacity: 0.8;
+  text-align: center;
   font-size: 35px;
 }
 h4{
@@ -37,7 +38,7 @@ h4{
 }
 h5{
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 500;
 }
 h6{
   font-size: 22px;
@@ -208,7 +209,7 @@ margin-top:20px;
   }
 
   h1{
-    margin: 20px;
+    margin: 22px;
     font-size: 40px;
   }
   h2{
@@ -217,14 +218,19 @@ margin-top:20px;
   h3{
     font-size: 20px;
   }
+  h5{
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: -25px;
+  }
   label{
     font-size: 20px;
   }
   .dashboard{
-  padding:20px;
+  padding:22px;
 }
 .log-section,.dashboard,.budget-section, .expense-section{
-margin: 20px;
+margin: 22px;
 opacity: 0.7;
 }
 input{
@@ -235,7 +241,20 @@ button{
   width: 40%;
   align-items: center;
 }
+a{
+  font-size: 2px;
+  text-wrap: wrap;
+  text-align: end;
+}
+.expense-title{
+margin-left: -20px;
+ text-wrap:pretty;
+ }
+.expense-amount{
+  margin-left: 80px;
 
+  text-wrap: wrap;
+ }
 .budget-summary,.expense-summary, .balance-summary{
   text-align: center;
   padding: 10px;
