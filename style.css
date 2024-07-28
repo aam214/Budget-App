@@ -201,8 +201,14 @@ margin-top:20px;
   }
 }
 @media (max-width:764px){
+  body{
+    background-position: center center;
+    background-attachment: fixed;
+
+  }
+
   h1{
-    margin: 10px;
+    margin: 20px;
     font-size: 40px;
   }
   h2{
@@ -218,7 +224,8 @@ margin-top:20px;
   padding:20px;
 }
 .log-section,.dashboard,.budget-section, .expense-section{
-margin: 10px;
+margin: 20px;
+opacity: 0.7;
 }
 input{
   width: 80%;
