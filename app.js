@@ -17,14 +17,15 @@ class UI {
     
     const savedList = localStorage.getItem('listItem');
     const savedID = localStorage.getItem('itemID');
+  
     if (savedList) {
       this.listItem = JSON.parse(savedList);
       this.listItem.forEach(item => this.addToExpense(item));
     }
+  
     if (savedID) {
       this.itemID = parseInt(savedID);
-    } 
-
+    }
   }
  
 //submit budget method
@@ -43,8 +44,9 @@ class UI {
   this.budgetTotal.textContent = value;
   this.budgetInput.value = "";
   this.showBalance();
-
+  this.saveWork();
 }
+
 }
 showBalance() {
  const expense = this.sumOfExpenses();
@@ -60,6 +62,7 @@ if (total < 0) {
   this.balance.classList.remove("redFont", "greenFont");
   this.balance.classList.add("blackFont");
  }
+
 }
 enterExpenses() {
   //console.log("Expense submitted");
@@ -79,7 +82,7 @@ setTimeout(function() {
   this.expenseInput.value = "";
   this.amountInput.value = "";
 
-  let expense ={
+  let expense = {
     id: this.itemID,
     title: expenseValue,
   amount:amount,
@@ -88,8 +91,8 @@ setTimeout(function() {
   this.listItem.push(expense);
   this.addToExpense(expense);
   this.showBalance();
+ this.saveWork();
 }
-this.saveData();
 }
 addToExpense(expense){
   const div = document.createElement('div');
@@ -108,6 +111,8 @@ addToExpense(expense){
     </div> 
     </div> `;
 this.expenseList.appendChild(div);
+this.showBalance();
+this.saveWork();
 }
 sumOfExpenses() {
 let total = 0;
@@ -118,7 +123,7 @@ if (this.listItem.length > 0) {
     return acc;
   }, 0);
   }
-  this. expenseTotal.textContent = total;
+  this.expenseTotal.textContent = total;
   return total;
 }
 editExpense(element) {
@@ -138,7 +143,7 @@ let temporaryLine = this.listItem.filter(function(item){
 });
 this.listItem = temporaryLine;
 this.showBalance();
-this.saveData();
+this.saveWork();
 }
 removeExpense(element){
 let id = parseInt(element.dataset.id);
@@ -151,9 +156,9 @@ let temporaryLine = this.listItem.filter(function(item){
 });
 this.listItem = temporaryLine;
 this.showBalance();
-this.saveData();
+this.saveWork();
 }
-saveData() {
+saveWork() {
   localStorage.setItem('listItem', JSON.stringify(this.listItem));
   localStorage.setItem('itemID', this.itemID);
 }
@@ -190,4 +195,5 @@ else if(event.target.parentElement.classList.contains('delete-icon'))
 }
 document.addEventListener ("DOMContentLoaded", function() {
   eventListeners();
+
 });
