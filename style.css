@@ -221,7 +221,11 @@ margin-top:20px;
   h5{
     font-size: 18px;
     font-weight: 500;
-    margin-left: -25px;
+  text-align: center;
+  }
+  h6{
+    font-size: 17px;
+   
   }
   label{
     font-size: 20px;
@@ -242,9 +246,7 @@ button{
   align-items: center;
 }
 a{
-  font-size: 2px;
-  text-wrap: wrap;
-  text-align: end;
+  font-size: 10px;
 }
 .expense-title{
 margin-left: -20px;
@@ -252,8 +254,6 @@ margin-left: -20px;
  }
 .expense-amount{
   margin-left: 80px;
-
-  text-wrap: wrap;
  }
 .budget-summary,.expense-summary, .balance-summary{
   text-align: center;
