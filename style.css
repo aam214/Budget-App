@@ -226,7 +226,7 @@ margin-top:20px;
 }
 @media (max-width:764px){
   body{
-    background-position: center center;
+    background-position: center bottom;
     background-attachment: fixed;
   }
   header{
