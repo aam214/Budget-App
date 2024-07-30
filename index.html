@@ -9,10 +9,10 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
-  <meta name="description" content="Budget App Tracker">
+  <meta name="description" content="A budget app to help you save money.">
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Budget Tracker</title>
+  <title>Budget App</title>
 </head>
 <body>
   <header>
@@ -25,21 +25,21 @@
   <div class="col-md-4 text-center">
   <div class="budget-summary">
   <i class="fa-solid fa-circle-exclamation"></i>
-  <h3>Budget</h3>
+  <h2>Budget</h2>
   <h5 class="budget-total" id="budget"><span>$</span><span id="budget-total">0</span></h5>
   </div>
   </div>
   <div class="col-md-4 text-center">
   <div class="expense-summary">
   <i class="fa-solid fa-hand-holding-dollar"></i>
-  <h3>Expenses</h3>
+  <h2>Expenses</h2>
   <h5 class="expense-total" id="expense"><span>$</span><span id="expense-total">0</span></h5>
   </div>
   </div>
   <div class="col-md-4 text-center">
   <div class="balance-summary">
   <i class="fa-solid fa-sack-dollar"></i>
-  <h3  id="balance-summary">Balance</h3>
+  <h2  id="balance-summary">Balance</h2>
   <h5 class="balance-total" id="balance"><span>$</span><span id="balance-total">0</span></h5>
   </div>
   </div>
@@ -50,7 +50,7 @@
   <div class="budget-message"></div>
   <form class="budget-form"  id="budget-form">
   <div class="form-group">
-    <label class="mb-4 text-center">Enter Your Budget 💰</label>
+    <h3 class="mb-4 text-center">Enter Your Budget 💰</h3>
   <input type="number" title="Enter number here" class="budget-input" id="budget-input">
   </div>
 </br>
@@ -70,12 +70,12 @@
     <div class="expense-message"></div>
     <form class="expense-form"  id="expense-form" >
       <div class="form-group">
-        <label class="mb-4">Expense Amount💲</label>
+        <h3 class="mb-4">Expense Amount💲</h3>
       </br>
         <input type="number" title="Enter number here" class="amount-input" id="amount-input">
         </div>
       <div class="form-group">
-        <label class="mt-5 mb-4">Expense Name📝</label>
+        <h3 class="mt-5 mb-4">Expense Name📝</h3>
       </br>
        <input type="text" class="expense-input" id="expense-input" maxlength="10">
       </div>
