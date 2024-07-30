@@ -42,7 +42,6 @@ h5{
 }
 h6{
   font-size: 22px;
-  margin-left: 10px;
   text-align: center;
 }
 label{
@@ -119,8 +118,8 @@ border-radius: 3px;
  
 }
 .lists-item{
-margin-left:100px;
 font-size: 25px;
+text-align: center;
  }
  .log-section i{
   font-size: 18px;
@@ -141,10 +140,9 @@ font-size: 25px;
  }
 .log-section{
   background-color: white;
-  margin-left: 810px;
+  margin-left: 780px;
   margin-top: 80px;
- 
-  max-width: 600px;
+  max-width: 670px;
   padding:18px;
   opacity: 0.84;
   border-radius: 3px;
@@ -165,7 +163,7 @@ border-radius: 3px;
   background-color: white;
   margin-left: 40px;
   text-align: center;
-  margin-top:-180px;
+  margin-top:-220px;
   padding: 40px;
   opacity: 0.84;
   border-radius: 3px;

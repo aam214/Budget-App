@@ -99,16 +99,16 @@ addToExpense(expense){
   div.classList.add("expense");
   div.innerHTML =
 `   <div class="expense-item d-flex justify-content-evenly align-items-baseline">
-    <h6 class="expense-title list-item">${expense.title}</h6>
-    <h6 class="expense-amount list-item">${expense.amount}</h6>
-    <div class="expense-icons list-item">
+    <h6 class="expense-title list-item">- ${expense.title}</h6>
+    <h6 class="expense-amount list-item">$ ${expense.amount}</h6>
+    <span class="expense-icons list-item">
     <a href="#" class="edit-icon" data-id="${expense.id}">
     <i class="fas fa-edit"></i>
     </a>
     <a href="#" class="delete-icon" data-id="${expense.id}">
     <i class="fas fa-trash"></i>
     </a>
-    </div> 
+    </span> 
     </div> `;
 this.expenseList.appendChild(div);
 this.showBalance();
