@@ -11,16 +11,26 @@ font-optical-sizing: auto;
 font-weight: 400;
 font-style: normal;
 }
+header{ 
+  padding: 50px 0;
+  margin: 0 auto;
+  display: block;
+  background-color: #4e9624;
+  opacity: 0.80;
+  margin-top: 50px;
+  margin-bottom: 99px;
+}
 h1{
   color:white;
-  margin: 20px 10px 20px 10px;
-  padding: 20px 10px 20px 10px;
-  background-color: #4e9624;
-  opacity: 0.84;
-  margin-top: 50px;
-  margin-bottom: 70px;
   font-size: 90px;
+  padding-left: 50px;
   letter-spacing: 7px;
+}
+header h2{
+  color: white;
+  font-size: 25px;
+  padding-left: 52px;
+  letter-spacing: 7.5px;
 }
 h2{
   font-size: 40px;
@@ -163,7 +173,7 @@ border-radius: 3px;
   background-color: white;
   margin-left: 40px;
   text-align: center;
-  margin-top:-220px;
+  margin-top:-240px;
   padding: 40px;
   opacity: 0.84;
   border-radius: 3px;
@@ -198,6 +208,7 @@ margin-top:20px;
   }
    .dashboard{
     max-width: 1000px;
+    margin: 32px;
     margin-top: 20px;
   }
 }
@@ -205,9 +216,7 @@ margin-top:20px;
   body{
     background-position: center center;
     background-attachment: fixed;
-
   }
-
   h1{
     margin: 22px;
     font-size: 40px;
