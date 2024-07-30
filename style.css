@@ -233,10 +233,6 @@ margin-top:20px;
   .dashboard{
   padding:22px;
 }
-.log-section,.dashboard,.budget-section, .expense-section{
-margin: 22px;
-opacity: 0.7;
-}
 input{
   width: 80%;
 }
@@ -246,14 +242,19 @@ button{
   align-items: center;
 }
 a{
-  font-size: 10px;
+  font-size: 4px;
 }
+.log-section,.dashboard,.budget-section, .expense-section{
+margin: 22px;
+opacity: 0.7;
+}
+
 .expense-title{
-margin-left: -20px;
- text-wrap:pretty;
+  font-size: 14px;
  }
 .expense-amount{
   margin-left: 80px;
+  font-size: 14px;
  }
 .budget-summary,.expense-summary, .balance-summary{
   text-align: center;

@@ -99,7 +99,7 @@ addToExpense(expense){
   div.classList.add("expense");
   div.innerHTML =
 `   <div class="expense-item d-flex justify-content-evenly align-items-baseline">
-    <h6 class="expense-title list-item">- ${expense.title}</h6>
+    <h6 class="expense-title list-item">${expense.title}</h6>
     <h6 class="expense-amount list-item">$ ${expense.amount}</h6>
     <span class="expense-icons list-item">
     <a href="#" class="edit-icon" data-id="${expense.id}">
