@@ -13,8 +13,8 @@ font-style: normal;
 }
 h1{
   color:white;
-  margin: 20px;
-  padding: 20px;
+  margin: 20px 10px 20px 10px;
+  padding: 20px 10px 20px 10px;
   background-color: #4e9624;
   opacity: 0.84;
   margin-top: 50px;
@@ -42,6 +42,8 @@ h5{
 }
 h6{
   font-size: 22px;
+  margin-left: 10px;
+  text-align: center;
 }
 label{
 text-align: center;
@@ -150,7 +152,7 @@ font-size: 25px;
 }
 .budget-section{
 background-color: white;
-margin-left: 30px;
+margin-left: 40px;
 text-align: center;
 margin-top:-310px;
 padding: 40px;
@@ -161,7 +163,7 @@ border-radius: 3px;
 }
 .expense-section{
   background-color: white;
-  margin-left: 30px;
+  margin-left: 40px;
   text-align: center;
   margin-top:-180px;
   padding: 40px;
@@ -242,7 +244,7 @@ input{
 }
 button{
   padding: 5px 10px; 
-  width: 40%;
+  width: 50%;
   align-items: center;
 }
 a{
